@@ -1,0 +1,99 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: pham thuong, no, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Cao Thuong\Desktop\KeilC\UART\uart.uvprojx
+Project File Date:  08/30/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+main.c(10): warning: unused variable 'receive' [-Wunused-variable]
+static volatile unsigned char receive[30];
+                              ^
+main.c(16): warning: unused variable 'trans' [-Wunused-variable]
+static volatile unsigned char trans[30]="Pham Thanh Cao Thuong";
+                              ^
+2 warnings generated.
+compiling main.c...
+uart.c(125): warning: passing 'volatile char[20]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                        control_led(read);
+                                    ^~~~
+./uart.h(19): note: passing argument to parameter 'buffer' here
+void control_led(char* buffer);
+                       ^
+uart.c(13): warning: no previous extern declaration for non-static variable 'TxBuffer' [-Wmissing-variable-declarations]
+volatile unsigned char TxBuffer[30];
+                       ^
+uart.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile unsigned char TxBuffer[30];
+         ^
+uart.c(14): warning: no previous extern declaration for non-static variable 'RxBuffer' [-Wmissing-variable-declarations]
+volatile unsigned char RxBuffer[30];
+                       ^
+uart.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile unsigned char RxBuffer[30];
+         ^
+3 warnings generated.
+compiling uart.c...
+compiling startup.c...
+compiling system_S32K144.c...
+assembling startup_S32K144.S...
+linking...
+Program Size: Code=2152 RO-data=612 RW-data=4 ZI-data=3188  
+".\Objects\uart.axf" - 0 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.S32_SDK_DFP.1.5.0.pack
+                Keil.S32_SDK_DFP.1.5.0
+                NXP S32 SDK S32K14x Device Support
+   * Component: Startup Version: 2.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/S32K144HAxxxLLx
+  ./RTE/_Target_1
+  C:/Users/Cao Thuong/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Cao Thuong/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices
+  C:/Users/Cao Thuong/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.0.0
+      Source file:   platform/devices/S32K144/startup/armc/startup_S32K144.S
+      Source file:   platform/devices/startup.c
+      Include file:  platform/devices/device_registers.h
+      Source file:   platform/devices/S32K144/startup/system_S32K144.c
+      Include file:  platform/devices/S32K144/startup/system_S32K144.h
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
